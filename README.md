@@ -1,1 +1,1 @@
-Frontend for the AI project
+Full Stack for the events system
