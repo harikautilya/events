@@ -2,7 +2,8 @@ import { ReportHandler } from 'web-vitals';
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
-    import('web-vitals').then(({
+    // eslint-disable-next-line no-void
+    void import('web-vitals').then(({
       getCLS,
       getFID,
       getFCP,

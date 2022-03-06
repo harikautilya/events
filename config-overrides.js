@@ -1,12 +1,13 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {
   override,
   disableChunk,
   addBabelPlugins,
   removeModuleScopePlugin,
   addBabelPresets,
+  addWebpackAlias,
 } = require('customize-cra');
 
+const path = require('path')
 module.exports = override(
   ...addBabelPresets('@babel/preset-env', '@babel/preset-react'),
   ...addBabelPlugins(
@@ -23,4 +24,8 @@ module.exports = override(
   ),
   disableChunk(),
   removeModuleScopePlugin(),
+  addWebpackAlias({
+    ['@components']: path.resolve(__dirname, 'src/components'),
+    ['@layouts']: path.resolve(__dirname, 'src/layouts')
+  })
 );

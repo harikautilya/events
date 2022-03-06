@@ -5,10 +5,10 @@ import './column.css';
 export interface ColumnProps extends BaseProps {
   center?: boolean,
   children?: React.ReactNode,
-  itemSpread?:string
+  itemSpread?: string
 }
 
-export const Column:React.FC<ColumnProps> = ({
+export const Column: React.FC<ColumnProps> = ({
   children,
   center = false,
   itemSpread = 'center',
