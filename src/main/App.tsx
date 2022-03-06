@@ -3,15 +3,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 } from 'react-router-dom';
 import 'main/App.css';
 
-import { Section } from 'layouts/section/section';
-import { Row } from 'layouts/row/row';
-import { Column } from 'layouts/column/column';
+
 import { Home } from 'pages/home/home';
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function App() {
   return (
     <Router>
